@@ -1,6 +1,3 @@
-
-
-
 var roman = function(input){
   if (input > 3999 || input < 1) {
     return false;
@@ -18,7 +15,28 @@ var roman = function(input){
 
  var numerals = ["","I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
 
- if (input >= 3000){
+
+ for (var i = 1000; i < 2000; i++){
+ if (i === input){
+ arrayM.push('M');
+ input -=1000;
+ }
+ }
+ for (var i = 2000; i < 3000; i++){
+   if (i === input){
+     arrayM.push('MM');
+     input -=2000;
+   }
+ }
+ for (var i = 3000; i < 4000; i++){
+   if (i === input){
+     arrayM.push('MMM');
+     input -=3000;
+   }
+ }
+
+
+ /*if (input >= 3000){
    arrayM.push('M')
    input -= 1000;
  }
@@ -30,6 +48,7 @@ if (input >= 1000){
   arrayM.push('M')
   input -= 1000;
 }
+*/
 if (input >= 900){
   arrayCM.push('CM')
   input -= 900;
@@ -53,6 +72,10 @@ if (input >= 200){
 if (input >= 100){
   arrayC.push('C')
   input -= 100;
+}
+if (input >= 90){
+  arrayXC.push('XC')
+  input -=90;
 }
 if (input >= 50){
   arrayL.push('L')
