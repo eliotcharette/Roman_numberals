@@ -6,7 +6,6 @@ var roman = function(input){
     return false;
  }
  var arrayI = [];
- var arrayV =[];
  var arrayX = [];
  var arrayXL = [];
  var arrayL = [];
@@ -20,72 +19,58 @@ var roman = function(input){
  var numerals = ["","I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"]
 
  if (input >= 3000){
-   input / 3000
    arrayM.push('M')
    input -= 1000;
  }
 if (input >= 2000){
-  input / 2000
   arrayM.push('M')
   input -= 1000;
 }
 if (input >= 1000){
-  input / 1000
   arrayM.push('M')
   input -= 1000;
 }
 if (input >= 900){
-  input / 900
   arrayCM.push('CM')
   input -= 900;
 }
 if (input >= 500){
-  input / 500
   arrayD.push('D')
   input -= 500;
 }
 if (input >= 400){
-  input / 400
   arrayC.push("CD")
   input -= 400;
 }
 if (input >= 300){
-  input / 100
   arrayC.push('C')
   input -= 100;
 }
 if (input >= 200){
-  input / 100
   arrayC.push('C')
   input -= 100;
 }
 if (input >= 100){
-  input / 100
   arrayC.push('C')
   input -= 100;
 }
 if (input >= 50){
-  input / 50
   arrayL.push('L')
   input -= 50;
 }
 if (input >= 40){
-  input / 40
   arrayXL.push('XL')
   input -= 40;
 }
 if (input >= 30){
-  input / 10
   arrayX.push('X')
   input -= 10;
 }
 if (input >= 20){
-  input / 10
   arrayX.push('X')
   input -= 10
 }
 if (input >= 10){
-  input / 10
   arrayX.push('X')
   input -= 10;
 }
